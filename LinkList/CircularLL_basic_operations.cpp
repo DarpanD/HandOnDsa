@@ -3,8 +3,6 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-// deletion work nahi kar raha
-
 
 class Node{
 
@@ -140,6 +138,7 @@ int main() {
 
 
     // deletion of node
+    cout << "Deletion of nodes " << endl;  
     cout << "tail : " <<  tail->data << "  " << tail <<endl;
     deleteNode(tail , 20);
     PrintCLL(tail);
