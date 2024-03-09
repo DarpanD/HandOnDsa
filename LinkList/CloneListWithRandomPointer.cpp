@@ -158,7 +158,6 @@ Node *copyrandomlist(Node *head)
 }
 
 // love baber approachs , TC : o(n) SC : O(1)
-// not working for a particular test case on gfg , idk why
 Node *ccopyRandomList(Node *head)
 {
 
@@ -227,7 +226,6 @@ int main()
     // ===============================
 
     cout << endl
-         << "adsfd"
          << endl;
     Node *newhead = ccopyRandomList(head);
     PrintLL(newhead);
