@@ -24,9 +24,11 @@ using namespace std;
 
 void SortedInsertion(stack<int> &stack, int element)
 {
+
     int yo = stack.empty() ? 0 : stack.top();
     cout
         << "element " << element << " top " << yo << endl;
+
     if (stack.empty() || stack.top() <= element)
     {
         cout << element << " pushed in stack" << endl;
@@ -37,6 +39,7 @@ void SortedInsertion(stack<int> &stack, int element)
     // if top is bigger then element , that means element must be one place lower to top
     int topelement = stack.top();
     stack.pop();
+
     cout << topelement << " pop out " << endl;
 
     // now rechecking is element can be placed
@@ -46,6 +49,7 @@ void SortedInsertion(stack<int> &stack, int element)
     //  now pushing the removed topelement
     cout << "   All elements smaller than " << topelement << " pushed , now pushing it" << endl
          << endl;
+
     stack.push(topelement);
 }
 
@@ -58,6 +62,7 @@ void sortStack(stack<int> &stack)
     // storing top
     int topelement = stack.top();
     stack.pop();
+
     cout << "Poped " << topelement << endl;
 
     // recursive call
@@ -65,6 +70,7 @@ void sortStack(stack<int> &stack)
 
     // now stack is empty . now insertion should be in sorted order
     cout << "   calling sortedInsertion... " << endl;
+
     SortedInsertion(stack, topelement);
 }
 void printStack(stack<int> temp)
